@@ -11,11 +11,12 @@ $mq-fixed-value: false;
 @import "layout/header";
 @import "layout/footer";
 
+$mobile: 375px;
+$tablet: 767px;
+$laptop: 1024px;
+
 :root {
-    --main-color: red;
-    --modal: 360px;
-    --tablet: 600px;
-    --laptop: 1024px;
+    --main-color: red; 
 }
 
 body{
@@ -28,53 +29,110 @@ h1, h2, p {
     text-align: center;
 }
 
-// img{
-//     display: block;
-//     max-width: 100%;
-//     height: auto;
-// }
-
 .page{
     position: relative;
     overflow: hidden;
 }
 
+.container {
+        margin: auto;
+        max-width: 1100px;
+        color: #fff;
+        // color: var(--main-color);
+        padding: 80px 15px;
+
+        @media screen and (max-width: $tablet){ 
+            padding: 60px 10px;              
+         }
+
+         @media screen and (max-width: $mobile){ 
+            padding: 20px 5px;              
+         }
+
+}
+
 .header{
+
     position: fixed;
     width: 100vw;
 
-    &-container{
+    &-container{        
         margin: 0 auto;
+        max-width: 1100px;
         width: 100%;
         display: flex;
         justify-content: space-between;
-        align-items: center;   
+        align-items: flex-end;
+        padding: 30px 15px 0; 
+        
+        
     }
 }
 
-.nav{   
+.nav{ 
+
     ul { 
+        
         li {
             width: 100px;
-            height: 55px;
-            background-color: rgba(255, 255, 255, 0.2);
-            border-radius: 0 0 5px 5px; 
+           
             text-align: center;
-            padding: 20px 0 0 0;
+
+            a {
+                display: block;            
+                &:hover{
+                    background-color: rgba(255, 255, 255, 0.2);
+                    border-radius: 0 0 5px 5px; 
+                    padding-top: 30px;
+                    margin-top: -30px;
+                }
+            }
+            
+            
         }
     }
-    &-btn{
+
+    @media screen and (max-width: $tablet){
         display: none;
     }
+
+    &-btn{
+        display: none;
+        position: relative;
+        left: auto;
+        right: auto;
+        width: 24px;
+        // height: 17px;
+        z-index: 2;
+        list-style: none; 
+        margin: 10px;
+        @media screen and (max-width: $tablet){ 
+            display: block;              
+        }
+    
+        & span, 
+        &:before,
+        &:after {
+            position: absolute;
+            left: 0;
+            right: 0;
+            content: "";
+            height: 3px;
+            background: #fff;
+            top: 50%;
+            margin-top: -1px;
+        }
+
+        &:after { margin-top: 5px; }
+        
+        &:before {margin-top: -7px; } 
+       
+    }         
 }
 
 a {
     text-decoration: none;
     color: hsl(0, 0%, 100%);
-
-    &:hover {
-        text-decoration: underline;
-    }
 }
 
 ul {
@@ -88,23 +146,42 @@ ul {
     margin: 0;
     padding: 0;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
     
     &-home{
         background-image: url(../imges/bgHome.jpg);
+
+        @media screen and (max-width: $tablet){
+            background-image: none;
+            background-color: #2d3f51;
+        }
     }
 
     &-services{
         background-image: url(../imges/bgServices.jpg);
+
+        @media screen and (max-width: $tablet){
+            background-image: none;
+            background-color: #b24a50;
+        }
+
         &-main {
             background-color: #c45158;
-            width: 260px;
-            height: 400px;
-            padding: 40px 25px; 
+            width: 23%;
+            padding: 40px 25px;
+            margin: 0 0 10px ; 
             
+            @media screen and (max-width: $tablet){
+                width: 48.5%; 
+            }
+
+            @media screen and (max-width: $mobile){
+                width: 100%; 
+            }
+
             h2 {
                 margin: 0 auto 10px;
              }    
@@ -121,6 +198,10 @@ ul {
     &-about{
         background-image: url(../imges/bgAbout.jpg);
         
+        @media screen and (max-width: $tablet){
+            background-image: none; 
+            background-color: #665464;
+        }
         &-main {
             background-color: #5b4b59;
             width: 260px;
@@ -130,6 +211,11 @@ ul {
     }
     &-work{
         background-image: url(../imges/bgWork.jpg);
+
+        @media screen and (max-width: $tablet){
+            background-image: none;
+            background-color: #83a457;
+        }
 
         &-middle{
             height: 100px;
@@ -153,7 +239,11 @@ ul {
 
     &-contacts {
         background-image: url(../imges/bgContacts.jpg);
-        background-size: cover;
+
+        @media screen and (max-width: $tablet){
+            background-image: none;
+            background-color: #75b4aa;
+        }
     }
 
     &-middle {
@@ -164,34 +254,18 @@ ul {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-
-        &-header {
-            width: 140px;
-            height: 140px;
-            border-radius: 50%;
-            background-color: #fff;
-            margin: 0 auto 10px;
-            
-            h2 {
-                margin: 0 auto 10px;
-            }
-        }
     }         
-}
-
-.container {
-        margin: auto;
-        width: 1100px;
-        color: #fff;
-        // color: var(--main-color);
-        padding: 80px 0 80px 0;
 }
 
 .footer{
     margin-top: -100px;
-    height: 100px;
     padding: 20px 0;
     background-color: #68a097;
+
+    @media screen and (max-width: $tablet){
+        padding: 10px 0;
+        margin-top: -60px;
+    }
 
     &-container{
         display: flex;
@@ -199,15 +273,18 @@ ul {
     }
 
     ul{
-        width: 360px;
-        height: 60px;
-        // border:1px solid #000;
         display: flex;
-        justify-content: space-between;
+        // justify-content: space-between;
 
         li{
             border: 30px solid #82c7bc;
             border-radius: 50%;
+            margin: 0 10px;
+
+            @media screen and (max-width: $tablet){
+                border: 20px solid #82c7bc;
+                border-radius: 50%;
+            }
         }
     }
 }
