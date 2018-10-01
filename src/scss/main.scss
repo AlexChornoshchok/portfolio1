@@ -11,6 +11,8 @@ $mq-fixed-value: false;
 @import "layout/header";
 @import "layout/footer";
 
+@import url('https://fonts.googleapis.com/css?family=Damion|Lato:300,400,700,900');
+
 $mobile: 375px;
 $tablet: 767px;
 $laptop: 1024px;
@@ -22,11 +24,52 @@ $laptop: 1024px;
 body{
     background: #fff;
     margin: 0;
+    font-weight: normal;
+    font-size: 14px;
+    font-family: Lato, Arial, Helvetica, sans-serif;
 }
 
-h1, h2, p {
+.logo{
+    // font-style: normal;
+    // font-variant:;
+    // font-weight: normal;
+    font-size: 30px;
+    line-height: 0;
+    font-family: Damion, Arial, Helvetica, sans-serif;
+    text-transform: lowercase;
+}
+
+h1, h2, h3 {
     margin: 0;
     text-align: center;
+    font-weight: lighter;
+    text-transform: uppercase;  
+}
+
+h1{
+    font-size: 3.75rem;
+    padding-bottom: 10px;    
+}
+
+h2{
+    font-size: 1.875rem;
+    padding-bottom: 10px;
+}
+
+h3{
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+    span{
+        color: #ec9da2;
+    }
+}
+
+p{
+    margin: 0;
+    text-align: center;
+    font-weight: lighter;
+    font-size: 0.875rem;    
 }
 
 .page{
@@ -39,20 +82,18 @@ h1, h2, p {
         max-width: 1100px;
         color: #fff;
         // color: var(--main-color);
-        padding: 80px 15px;
+        padding: 60px 15px;
 
         @media screen and (max-width: $tablet){ 
-            padding: 60px 10px;              
+            padding: 40px 10px;              
          }
 
          @media screen and (max-width: $mobile){ 
             padding: 20px 5px;              
          }
-
 }
 
 .header{
-
     position: fixed;
     width: 100vw;
 
@@ -63,32 +104,29 @@ h1, h2, p {
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
-        padding: 30px 15px 0; 
-        
-        
+        padding: 30px 15px 0;      
     }
 }
 
 .nav{ 
+    font-size: 18px;
 
     ul { 
         
         li {
             width: 100px;
-           
             text-align: center;
 
             a {
-                display: block;            
+                display: block;
+
                 &:hover{
                     background-color: rgba(255, 255, 255, 0.2);
                     border-radius: 0 0 5px 5px; 
                     padding-top: 30px;
                     margin-top: -30px;
                 }
-            }
-            
-            
+            }                        
         }
     }
 
@@ -125,8 +163,7 @@ h1, h2, p {
 
         &:after { margin-top: 5px; }
         
-        &:before {margin-top: -7px; } 
-       
+        &:before {margin-top: -7px; }        
     }         
 }
 
@@ -190,7 +227,8 @@ ul {
             width: 140px;
             height: 140px;
             border-radius: 50%;
-            background-color: #fff;
+            // background-color: #fff;
+            background-image: url(../imges/lamp.jpg);
             margin: 0 auto 10px;
         }     
     }
@@ -223,6 +261,7 @@ ul {
             border-top: 1px solid #94b963;
             border-bottom: 1px solid #94b963;
         }
+
         &-main{
             width: 260px;
             height: 250px; 
