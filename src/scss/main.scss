@@ -21,11 +21,23 @@ $laptop: 1024px;
     --main-color: red; 
 }
 
+*{
+    @media screen and (max-width: $tablet){ 
+        font-size: 0.875rem;              
+    }
+
+    @media screen and (max-width: $mobile){ 
+        font-size: 0.75rem;             
+    }
+
+}
+
+
 body{
     background: #fff;
     margin: 0;
     font-weight: normal;
-    font-size: 14px;
+    // font-size: 1rem;
     font-family: Lato, Arial, Helvetica, sans-serif;
 }
 
@@ -207,30 +219,12 @@ ul {
 
         &-main {
             background-color: #c45158;
-            width: 23%;
-            padding: 40px 25px;
-            margin: 0 0 10px ; 
-            
-            @media screen and (max-width: $tablet){
-                width: 48.5%; 
-            }
-
-            @media screen and (max-width: $mobile){
-                width: 100%; 
-            }
 
             h2 {
                 margin: 0 auto 10px;
              }    
         }
-        &-img{
-            width: 140px;
-            height: 140px;
-            border-radius: 50%;
-            // background-color: #fff;
-            background-image: url(../imges/lamp.jpg);
-            margin: 0 auto 10px;
-        }     
+            
     }
 
     &-about{
@@ -245,7 +239,23 @@ ul {
             width: 260px;
             height: 400px;
             padding: 40px 25px;    
-        }   
+        }  
+        &-middle{
+            width: 25%;
+            text-align: center;
+            background-color: #a1ca6c;
+            border-radius: 5px;
+            margin: auto;
+            padding: 15px 40px;
+
+            @media screen and (max-width: $tablet){
+                padding: 10px 30px; 
+            }
+
+            @media screen and (max-width: $mobile){
+                padding: 5px 20px; 
+            }
+        }  
     }
     &-work{
         background-image: url(../imges/bgWork.jpg);
@@ -287,13 +297,37 @@ ul {
 
     &-middle {
         height: 120px;
+        font-weight: bold;
+        font-size: 1.5rem;
+        display: flex;
     }
 
-    &-main {
+    &-main-container {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-    }         
+    }  
+    &-main{
+        width: 23%;
+        padding: 40px 25px;
+        margin: 0 0 10px ; 
+        
+        @media screen and (max-width: $tablet){
+            width: 48.5%; 
+        }
+
+        @media screen and (max-width: $mobile){
+            width: 100%; 
+        }
+    }
+    &-img{
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+        background-color: #fff;
+        margin: 0 auto 10px;
+    } 
+    
 }
 
 .footer{
@@ -313,18 +347,26 @@ ul {
 
     ul{
         display: flex;
-        // justify-content: space-between;
+        color: #fff;
 
         li{
+            // content: '';
             border: 30px solid #82c7bc;
             border-radius: 50%;
             margin: 0 10px;
+            background-color: #82c7bc;
 
             @media screen and (max-width: $tablet){
                 border: 20px solid #82c7bc;
-                border-radius: 50%;
-            }
+                // border-radius: 50%;
+            }  
         }
     }
+
+    &-icon{
+        // margin-left: 50%;
+        font-size: 2rem;
+    }
 }
+
 
