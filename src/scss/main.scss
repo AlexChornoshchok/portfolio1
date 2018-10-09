@@ -107,6 +107,7 @@ p{
 .header{
     position: fixed;
     width: 100vw;
+    z-index: 10;
 
     &-container{        
         margin: 0 auto;
@@ -378,6 +379,7 @@ ul {
             text-align: center;
             display: flex;
             flex-direction: column;
+            cursor: pointer;
 
             @media screen and (max-width: $tablet){
                 width: 48.5%; 
@@ -393,25 +395,94 @@ ul {
                 border-radius: 4px 4px 0 0; 
             }
 
-            p{
+            p {
                 padding-bottom: 5px;
                 text-transform: uppercase;
-            }      
+            } 
+            
+            &-img{
+                width:100%;
+                height: 100%;
+                line-height: 0;
+                background-color: #3d4d29;
+                border-radius: 4px 4px 0 0;
+                position: relative;
+
+                & span {
+                    width: 50px;
+                    height: 50px;
+                    border: 2px solid #eeeeee;
+                    position: absolute;
+                    border-radius: 50%;  
+                    top: 50%;  
+                    right: 50%;
+                    transform: translate(50%, -50%); 
+                    display: none; 
+                    
+                    &:after,
+                    &:before {
+                        position: absolute;
+                        left: 10px;
+                        right: 10px;
+                        content: '';
+                        height: 2px;
+                        background: #eeeeee;
+                        top: 50%;
+                        margin-top: -1px;
+                    }
+
+                    &:before {
+                        transform: rotate(90deg); 
+                    }
+                }
+
+
+            }
+
+            // &-img img:hover{
+            //     opacity: 0.7;
+            // }
+
+            // &-img span:hover{
+            //     display: block;
+            //     z-index: 1;
+            // }
+
+            &-img:hover{
+                img {
+                    opacity: 0.7;
+                } 
+                span {
+                    display: block;
+                    z-index:  1;
+                }
+            }
+
         }
-        &-triangle{
+
+        &-tr { 
+            text-align: center;
+            position: relative;   
+        }
+
+        &-triangle {
             border: 10px solid transparent;
-            border-bottom: 10px solid #000;
+            border-bottom: 10px solid #eeeeee;
+            // border-bottom: 10px solid #000;
+            position: absolute;
+            top: -20px;
 
             @media screen and (max-width: $tablet){
                 border: 10px solid transparent;
-                border-top: 10px solid #a1ca6c;; 
+                border-bottom: 10px solid #eeeeee; 
             }
 
             @media screen and (max-width: $mobile){
-                border: 5px solid transparent;
-                border-top: 5px solid #a1ca6c; 
+                border: 10px solid transparent;
+                border-bottom: 10px solid #eeeeee; 
             }
         }
+        
     }
     // .block
     &-contacts {
