@@ -201,7 +201,7 @@ ul {
     background-position: 50% 50%;
     
     &-home{
-        background-image: url(../imges/bgHome.jpg);
+        background-image: url(../images/bgHome.jpg);
 
         @media screen and (max-width: $tablet){
             background-image: none;
@@ -210,7 +210,7 @@ ul {
     }
 
     &-services{
-        background-image: url(../imges/bgServices.jpg);
+        background-image: url(../images/bgServices.jpg);
 
         @media screen and (max-width: $tablet){
             background-image: none;
@@ -228,7 +228,7 @@ ul {
     }
     // .block
     &-about{
-        background-image: url(../imges/bgAbout.jpg);
+        background-image: url(../images/bgAbout.jpg);
         text-align: center;
        
 
@@ -354,7 +354,7 @@ ul {
     }
     // .block
     &-work{
-        background-image: url(../imges/bgWork.jpg);
+        background-image: url(../images/bgWork.jpg);
 
         @media screen and (max-width: $tablet){
             background-image: none;
@@ -415,7 +415,7 @@ ul {
     }
     // .block
     &-contacts {
-        background-image: url(../imges/bgContacts.jpg);
+        background-image: url(../images/bgContacts.jpg);
 
         @media screen and (max-width: $tablet){
             background-image: none;
