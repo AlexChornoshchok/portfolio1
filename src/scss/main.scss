@@ -199,6 +199,10 @@ ul {
     background-size: cover;
     background-position: 50% 50%;
     
+    &-header{
+        padding-bottom: 20px;
+    }
+
     &-home{
         background-image: url(../images/bgHome.jpg);
 
@@ -214,6 +218,10 @@ ul {
         @media screen and (max-width: $tablet){
             background-image: none;
             background-color: #b24a50;
+        }
+
+        &-middle{
+            height: 100px;
         }
 
         &-img{
@@ -267,13 +275,10 @@ ul {
             height: 400px;
             padding: 40px 25px; 
             position: relative;
-            
 
             &:hover{
                 cursor: pointer;
-                .block-about-img-ink{
-                    // opacity: 0;   
-                }
+
                 .block-about-img-ink_hover{
                     opacity: 1;   
                 }
@@ -303,8 +308,12 @@ ul {
             
             }
         } 
-        // .block 
+        
         &-middle{
+            flex-direction: column;
+        }
+
+        &-text{
             background-color: #a1ca6c;
             border-radius: 5px;
             margin: auto auto 0;
@@ -370,6 +379,8 @@ ul {
                 transform: translate(2.5px, 2.5px);
                 top:0;
                 left:0;
+                background: url(./images/incognita.png) no-repeat;
+
             } 
 
             img {
@@ -429,29 +440,31 @@ ul {
         }
 
         &-portfolio{
-            height: 100px;
-            padding: 50px 0 0 45px;
+            width: 100%;
             border-top: 1px solid #94b963;
             border-bottom: 1px solid #94b963;
             font-weight: bold;
             font-size: 1rem;
             display: flex;
             justify-content: space-between;
-            align-items: flex-end;
+            padding: 20px 20px 20px 10px;
 
             &-logo{
                 font-size: 1.25rem;
             }
 
             &-nav{
-                width: 110px;
+                // width: 110px;
 
                 ul{
                     li{
-                        width: 110px;
+                        width: 130px;
+                        padding: 0 10px;
                         a:hover{
                             background-color: #f5c149;
                             border-radius: 5px;
+                            padding: 0;
+                            margin: 0;
                         }
                     }
                 }
@@ -572,11 +585,10 @@ ul {
     }
     // .block
     &-middle {
-        height: 120px;
         font-weight: bold;
         font-size: 1.5rem;
         display: flex;
-        flex-direction: column;
+        padding-bottom: 20px;
     }
     // .block
     &-main-container {
