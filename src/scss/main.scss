@@ -17,10 +17,6 @@ $mobile: 375px;
 $tablet: 767px;
 $laptop: 1024px;
 
-:root {
-    --main-color: red; 
-}
-
 *{
     @media screen and (max-width: $tablet){ 
         font-size: 0.875rem;              
@@ -49,7 +45,7 @@ body{
     text-transform: lowercase;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
     margin: 0;
     text-align: center;
     font-weight: lighter;
@@ -582,16 +578,80 @@ ul {
             background-color: #75b4aa;
         }
 
+        h2 {
+            display: block;
+            text-transform: none;
+            text-align: left;
+        }
+
+        h3 {
+            color: #c0dfda;
+            text-transform: none;
+            text-align: left;
+            padding-bottom: 19px;
+        }     
+
+        p {
+            text-align: justify;
+            font-size: 1rem;   
+        }
+
+        a {
+            font-size: 1rem;
+            // padding-left: 10px;
+            margin-left: 20px;
+        }
+
         &-address{
-            min-width: 100px;
-            min-height: 100px;
+            width: 48%;
+            // min-height: 100px;
             border: 1px solid #000;
+            // display: flex;
+            text-align: center; 
+            padding-bottom: 5px;
+            
+            @media screen and (max-width: $tablet){
+                width: 100%; 
+            }           
+
+            &-phm{
+                width: 49%;
+                height: 83%;
+                // border: 1px solid #000;
+                display: inline-block;
+                vertical-align: bottom;
+
+                @media screen and (max-width: $mobile){
+                    width: 100%; 
+                    height: 50%;
+                }
+
+                iframe {
+                    width: 100%;
+                    height: 100%;
+                    border-style: none;
+                    
+                }
+            }
+
+            table {
+                margin-top:25%;
+            }
+     
+            td {
+                color: #c0dfda;
+            }
         }
 
         &-question{
-            min-width: 100px;
+            width: 48%;
             min-height: 100px;
             border: 1px solid #000;
+            padding-bottom: 5px;
+
+            @media screen and (max-width: $tablet){
+                width: 100%; 
+            }
         }
     }
     // .block
@@ -624,7 +684,7 @@ ul {
 }
 
 .footer{
-    margin-top: -100px;
+//    margin-top: -100px;
     padding: 20px 0;
     background-color: #68a097;
 
@@ -643,7 +703,7 @@ ul {
         color: #fff;
 
         li{
-            border: 30px solid #82c7bc;
+            border: 20px solid #82c7bc;
             border-radius: 50%;
             margin: 0 10px;
             background-color: #82c7bc;
