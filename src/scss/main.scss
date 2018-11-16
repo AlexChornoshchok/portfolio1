@@ -184,15 +184,28 @@ ul {
     margin: 0;
     display: flex;
     list-style: none;
+}   
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #75b4aa;
+}
+::-moz-placeholder { /* Firefox 19+ */
+    color: #75b4aa;
+}
+:-ms-input-placeholder { /* IE 10+ */
+    color: #75b4aa;
+}
+:-moz-placeholder { /* Firefox 18- */
+    color: #75b4aa;
 }
 
-.single-item{
-    margin: 0;
-    padding: 0;
-    width: 100vw;
-    min-height: 100vh;
-}    
-
+form input,
+form span,
+form label,
+form textarea,
+form select {
+	cursor: pointer;
+}
 // style for slider. Start
 .sl{
 
@@ -212,6 +225,14 @@ ul {
         padding: 20px 40px;
         line-height: 1;
         border-radius: 3px;
+        @media screen and (max-width: $tablet){ 
+            padding: 10px 20px; 
+        }
+
+        @media screen and (max-width: $mobile){ 
+            padding: 5px 10px;
+        }
+
     }
 
     &__caption{
@@ -225,11 +246,11 @@ ul {
 
         @media screen and (max-width: $tablet){ 
             font-size: 1.75rem;              
-         }
+        }
 
-         @media screen and (max-width: $mobile){ 
+        @media screen and (max-width: $mobile){ 
             font-size: 1rem;              
-         }
+        }
     }
 
     &__par{
@@ -239,27 +260,39 @@ ul {
         font-weight: 900;
         text-transform: uppercase; 
         @media screen and (max-width: $tablet){ 
-            font-size: 3.75rem;              
-         }
+           font-size: 3.75rem;              
+        }
 
-         @media screen and (max-width: $mobile){ 
-            font-size: 2rem;              
-         }
+        @media screen and (max-width: $mobile){ 
+           font-size: 2rem;              
+        }
     }
 }
 
-.slick-prev {
-    left: 25px;
-    z-index: 1001;
-    
+.slick-dots li button{
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
 }
-.slick-next {
-    right: 25px;
-    z-index: 1001;
+
+.slick-dots li button:before{
+    content: '';
 }
+
+.slick-dots li button:hover,
+.slick-dots li.slick-active button{
+    background: #74c7d5;
+    border-radius: 50%;
+}
+
+.slick-dots li button:hover:before,
+.slick-dots li.slick-active button:before{
+    background: #74c7d5;
+    border-radius: 50%;
+}
+
 .slick-dots {
     position: absolute;
-    bottom: 25px;
+    bottom: 50px;
     display: block;
     width: 100%;
     padding: 0;
@@ -268,7 +301,65 @@ ul {
     text-align: center;
 }
 
-.slick-active{}
+.slick-dots li {
+    margin: 0 20px;
+}
+
+.slick-dotted.slick-slider {
+    margin-bottom: 0;
+}
+
+.slick-prev, .slick-next {
+    z-index: 1001;
+}
+
+.slick-prev {
+    left: 1.5rem;
+
+    @media screen and (max-width: $tablet){ 
+        left: 1.25rem;              
+    }
+
+    @media screen and (max-width: $mobile){ 
+        left: 1rem;             
+    }
+    
+    
+}
+.slick-next {
+    right: 1.5rem;
+    transform: translate(-100%, 0);
+
+    @media screen and (max-width: $tablet){ 
+        right: 1.25rem;
+    }
+
+    @media screen and (max-width: $mobile){ 
+        right: 1rem;
+    }
+
+}
+
+.slick-prev:before,
+.slick-next:before{
+    font-size: 3rem;
+
+    @media screen and (max-width: $tablet){ 
+        font-size: 1.5rem;              
+    }
+
+    @media screen and (max-width: $mobile){ 
+        font-size: 1rem;             
+    }
+}
+
+.slick-prev:before{
+    content: "<"
+}
+
+.slick-next:before{
+    content: ">"
+} 
 // style for slider. End
 
 
@@ -737,6 +828,14 @@ ul {
 
             @media screen and (max-width: $tablet){
                 width: 100%; 
+            }
+        }
+
+        &-form{
+
+            &-textarea{
+                width: 100%;
+                // background-color: #8a097;
             }
         }
     }
