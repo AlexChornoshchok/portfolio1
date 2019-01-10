@@ -36,13 +36,21 @@ body{
 }
 
 .logo{
-    // font-style: normal;
-    // font-variant:;
-    // font-weight: normal;
-    font-size: 50px;
     line-height: 1;
     font-family: Damion, Arial, Helvetica, sans-serif;
     text-transform: lowercase;
+
+    a {
+        font-size: 3.125rem;
+
+        @media screen and (max-width: $tablet){ 
+            font-size: 2.25rem;
+        }
+
+        @media screen and (max-width: $mobile){ 
+            font-size: 1.5rem;
+        }
+    }
 }
 
 h1, h2, h3, h4 {
@@ -749,10 +757,13 @@ form select {
     // .block
     &-contacts {
         background-image: url(../images/bgContacts.jpg);
+        padding: 80px;
 
         @media screen and (max-width: $tablet){
             background-image: none;
             background-color: #75b4aa;
+            padding: 20px 5px;
+        
         }
 
         h2 {
@@ -766,6 +777,7 @@ form select {
             text-transform: none;
             text-align: left;
             padding-bottom: 19px;
+
         }     
 
         p {
@@ -775,44 +787,48 @@ form select {
 
         a {
             font-size: 1rem;
-            // padding-left: 10px;
             margin-left: 20px;
         }
 
         &-address{
             width: 48%;
-            // min-height: 100px;
-            border: 1px solid #000;
-            // display: flex;
             text-align: center; 
             padding-bottom: 5px;
             
             @media screen and (max-width: $tablet){
                 width: 100%; 
-            }           
+            }   
+        
 
             &-phm{
                 width: 49%;
                 height: 83%;
-                // border: 1px solid #000;
                 display: inline-block;
                 vertical-align: bottom;
 
                 @media screen and (max-width: $mobile){
                     width: 100%; 
-                    height: 50%;
+                    height: 42%;
+                    padding-top: 5px;
                 }
 
                 iframe {
                     width: 100%;
                     height: 100%;
                     border-style: none;
+                    // display: inline-block;
+                    vertical-align: bottom;
                     
                 }
             }
 
             table {
                 margin-top:25%;
+
+                @media screen and (max-width: $mobile){
+                   margin-top: 0;
+                }
+
             }
      
             td {
@@ -823,7 +839,6 @@ form select {
         &-question{
             width: 48%;
             min-height: 100px;
-            border: 1px solid #000;
             padding-bottom: 5px;
 
             @media screen and (max-width: $tablet){
@@ -833,13 +848,101 @@ form select {
 
         &-form{
 
+            position: relative;
+
+            &-bname{
+                margin: 0 auto;
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                padding: 0 0 30px 0;
+
+                @media screen and (max-width: $mobile){
+                   flex-wrap: wrap;
+                   padding: 0 0 10px 0;
+                }
+      
+                
+                &-label{
+                    width: 49%;
+                    height: 60px;
+                    background-color: #68a097;
+                    border: 0;
+                    border-radius: 3px; 
+                    // display: block;
+                    color: #82c8bd;
+                    font-size: 1rem;
+                    line-height: 60px;
+                    padding: 0 15px 0;
+
+                    @media screen and (max-width: $tablet){
+                        width: 48.5%; 
+                    }
+            
+                    @media screen and (max-width: $mobile){
+                        width: 100%;
+                        height: 40px;
+                        line-height: 40px;
+                        margin-bottom: 10px;
+
+
+                    }
+            
+                }
+
+                &-input{
+                    width: 49%;
+                    height: 60px;
+                    border: 0;
+                    border-radius: 3px; 
+                    
+                    @media screen and (max-width: $tablet){
+                        width: 48.5%; 
+                    }
+            
+                    @media screen and (max-width: $mobile){
+                        width: 100%; 
+                        height: 40px;
+                    }
+            
+                }
+            }
+
             &-textarea{
                 width: 100%;
-                // background-color: #8a097;
+                background-color: #68a097;
+                border: 0;
+                border-radius: 3px;
+                margin: 0 auto;
+                display: block;
+                height: 168px;
+                resize: none;
+                line-height: 60px;
+                padding: 0 15px 0;
+
+
             }
 
             &-submit{
-                
+                width: 49%;
+                height: 45px;
+                border: 0;
+                border-radius: 3px;
+                text-transform: uppercase;
+                background: #df5c64;
+                font: 700 2rem Lato, sans-serif;
+                border-bottom: 4px solid #c8535a;
+                position: absolute;
+                transform: translate(50%, 50%);
+
+                @media screen and (max-width: $tablet){
+                    font-size: 1.75rem;
+                }
+        
+                @media screen and (max-width: $mobile){
+                    font-size: 1.5rem;
+                }
+
             }
         }
     }
@@ -879,7 +982,7 @@ form select {
 
     @media screen and (max-width: $tablet){
         padding: 10px 0;
-        margin-top: -60px;
+        margin-top: -30px;
     }
 
     &-container{

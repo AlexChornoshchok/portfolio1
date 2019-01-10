@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="./slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css"/>
     <link type = "text/css" rel="stylesheet" href="./css/main.css">   
-    <base target="_blank">
+    <!-- <base target="_blank"> -->
     <title>Course Protect</title>
 </head>
 
@@ -17,7 +17,7 @@
         <header class="header">
             <div class="header-container">
                 <div class="logo">
-                        <a href="#">Acrostia</a>
+                    <a href="#">Acrostia</a>
                 </div>
                 <nav class = "nav">
                     <ul>
@@ -84,8 +84,6 @@
                     </div>
                 </div>
             </div>
-            
-
         </div>
         <section class="block block-services" id = "Services">
             <div class="container">   
@@ -225,6 +223,9 @@
                                 <li><a href="#Work">Web design</a></li>
                             </ul>
                         </nav>
+                        <a href="" class = "nav-btn">
+                            <span></span>
+                        </a>
                     </div>
                 </div>
                 <div class = "block-main-container">
@@ -354,13 +355,13 @@
                     </div>
                     <div class = "block-contacts-question">
                         <h2>Aks a question</h2>
-                            <form action="" class="block-contacts-form">
-                                <div>
-                                    <label for="f-mame">Name</label>
-                                    <input type="text" name="f-name">
+                            <form method="post" action="url" name="f-question" class="block-contacts-form">
+                                <div class="block-contacts-form-bname">
+                                    <label for="input-name" class="block-contacts-form-bname-label">Name</label>
+                                    <input type="text" id="input-name" class="block-contacts-form-bname-input">
                                 </div>    
-                                <textarea name="" id="" cols="30" rows="5" placeholder="Your question" class="block-contacts-form-textarea">Your question</textarea> 
-                                <input type="sudmit" value="submit" class="block-contacts-form-submit">
+                                <textarea name="f-textarea" cols="30" rows="5" placeholder="Your question" class="block-contacts-form-textarea"></textarea> 
+                                <input type="submit" value="submit" class="block-contacts-form-submit">
                             </form>
                     </div>
                 </div>
@@ -369,18 +370,10 @@
         <footer class="footer"> 
             <div class="footer-container">
                 <ul>
-                    <a href="https://www.facebook.com/">
-                        <li class = "footer-icon icon-facebook"></li>
-                    </a>
-                    <a href="https://twitter.com/">
-                        <li class = "footer-icon icon-twitter"></li>
-                    </a>
-                    <a href="https://plus.google.com/">
-                        <li class = "footer-icon icon-google-plus"></li>
-                    </a>
-                    <a href="https://www.linkedin.com/">
-                        <li class = "footer-icon icon-linkedin2"></li>
-                    </a>
+                    <li class = "footer-icon icon-facebook"></li>
+                    <li class = "footer-icon icon-twitter"></li>
+                    <li class = "footer-icon icon-google-plus"></li>
+                    <li class = "footer-icon icon-linkedin2"></li>
                 </ul>
             </div>
         </footer>
@@ -388,9 +381,9 @@
     <script src="js/libs/libs.js "></script>
     
 
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="slick/slick.min.js"></script>
     
     <script src="js/main.js "></script>
 </body>
