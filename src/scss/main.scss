@@ -214,6 +214,7 @@ form textarea,
 form select {
 	cursor: pointer;
 }
+
 // style for slider. Start
 .sl{
 
@@ -345,7 +346,6 @@ form select {
     @media screen and (max-width: $mobile){ 
         right: 1rem;
     }
-
 }
 
 .slick-prev:before,
@@ -369,6 +369,35 @@ form select {
     content: ">"
 } 
 // style for slider. End
+
+.block:not(:target),
+.footer
+{
+    display: none;
+}
+
+.block:target
+{
+    display: block;
+}
+
+// #contacts:not(:target)
+// {
+//     display: none;
+// }
+
+// #contacts:target
+// {
+//     display: block;
+// }
+
+// .footer,
+// .footer-container,
+// .footer-icon,
+// .footer-list
+// {
+//     display: var(--contacts-target);
+// }
 
 
 .block{
@@ -976,7 +1005,6 @@ form select {
 }
 
 .footer{
-//    margin-top: -100px;
     padding: 20px 0;
     background-color: #68a097;
 
@@ -1002,7 +1030,6 @@ form select {
 
             @media screen and (max-width: $tablet){
                 border: 20px solid #82c7bc;
-                // border-radius: 50%;
             }  
         }
     }
