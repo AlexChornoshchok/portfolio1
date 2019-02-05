@@ -370,35 +370,36 @@ form select {
 } 
 // style for slider. End
 
-.block:not(:target),
-.footer
-{
+// #Home:not(:target),
+#Services:not(:target),
+#About:not(:target),
+#Work:not(:target),
+#Contacts:not(:target){
     display: none;
 }
 
-.block:target
-{
+// #Home:target,
+#Services:target,
+#About:target,
+#Work:target,
+#Contacts:target{
     display: block;
 }
 
-// #contacts:not(:target)
+.footer{
+    display: none; 
+}
+
+// .block:not(:target),
+// .footer
 // {
 //     display: none;
 // }
 
-// #contacts:target
+// .block:target
 // {
 //     display: block;
 // }
-
-// .footer,
-// .footer-container,
-// .footer-icon,
-// .footer-list
-// {
-//     display: var(--contacts-target);
-// }
-
 
 .block{
     margin: 0;
