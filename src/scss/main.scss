@@ -91,19 +91,18 @@ p{
 }
 
 .container {
-        margin: auto;
-        max-width: 1100px;
-        color: #fff;
-        // color: var(--main-color);
-        padding: 60px 15px;
+    margin: auto;
+    max-width: 1100px;
+    color: #fff;
+    padding: 60px 15px;
 
-        @media screen and (max-width: $tablet){ 
-            padding: 40px 10px;              
-         }
+    @media screen and (max-width: $tablet){ 
+        padding: 40px 10px;              
+    }
 
-         @media screen and (max-width: $mobile){ 
-            padding: 20px 5px;              
-         }
+    @media screen and (max-width: $mobile){ 
+        padding: 20px 5px;              
+    }
 }
 
 .header{
@@ -241,7 +240,6 @@ form select {
         @media screen and (max-width: $mobile){ 
             padding: 5px 10px;
         }
-
     }
 
     &__caption{
@@ -332,9 +330,8 @@ form select {
     @media screen and (max-width: $mobile){ 
         left: 1rem;             
     }
-    
-    
 }
+
 .slick-next {
     right: 1.5rem;
     transform: translate(-100%, 0);
@@ -370,37 +367,25 @@ form select {
 } 
 // style for slider. End
 
-// #Home:not(:target),
-#Services:not(:target),
-#About:not(:target),
-#Work:not(:target),
-#Contacts:not(:target){
-    display: none;
-}
-
-// #Home:target,
-#Services:target,
-#About:target,
-#Work:target,
-#Contacts:target{
-    display: block;
-}
-
-.footer{
-    display: none; 
-}
-
-// .block:not(:target),
-// .footer
-// {
+// // #Home:not(:target),
+// #Services:not(:target),
+// #About:not(:target),
+// #Work:not(:target),
+// #Contacts:not(:target){
 //     display: none;
 // }
 
-// .block:target
-// {
-//     display: block;
-// }
+// #Home:target,
+#Services-nav:target,
+// #About:target,
+// #Work:target,
+// #Contacts:target
+{
+    background-color: red;
+    // display: block;
+}
 
+    
 .block{
     margin: 0;
     padding: 0;
@@ -515,7 +500,6 @@ form select {
                     border-color: #3e61af;
                     background-color: #3e61af;
                 } 
-            
             }
         } 
         
@@ -664,7 +648,6 @@ form select {
             }
 
             &-nav{
-                // width: 110px;
 
                 ul{
                     li{
@@ -1039,5 +1022,3 @@ form select {
         font-size: 2rem;
     }
 }
-
-
